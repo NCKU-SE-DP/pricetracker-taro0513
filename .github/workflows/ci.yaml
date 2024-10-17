@@ -7,10 +7,11 @@ on:
   pull_request:
     branches:
       - 'main'
+  workflow_dispatch:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, F74114778]
 
     steps:
       - name: Checkout code
