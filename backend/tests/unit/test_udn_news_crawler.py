@@ -2,8 +2,8 @@ import unittest
 from unittest.mock import patch, MagicMock
 from requests.models import Response
 from sqlalchemy.orm import Session
-from src.crawler.udn_crawler import UDNCrawler, NewsWithSummary
-from src.crawler.exceptions import DomainMismatchException
+from backend.src import UDNCrawler, NewsWithSummary
+from backend.src import DomainMismatchException
 
 
 class TestUDNCrawler(unittest.TestCase):

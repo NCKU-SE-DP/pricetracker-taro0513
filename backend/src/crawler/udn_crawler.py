@@ -32,15 +32,11 @@ UDNCrawler Methods:
     _commit_changes(db: Session): Commits the changes to the database with error handling.
 """
 
-from urllib.parse import quote
-import requests
 from requests import Response
 from bs4 import BeautifulSoup
 from sqlalchemy.orm import Session
 
-from src.models import NewsArticle
 from .base import NewsCrawlerBase, Headline, News, NewsWithSummary
-from .exceptions import DomainMismatchException
 
 
 class UDNCrawler(NewsCrawlerBase):
